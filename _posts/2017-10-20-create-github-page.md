@@ -12,11 +12,11 @@ comments: true
 
 下面开始搭建流程。
 
-### 准备Github的账号
+## 准备Github的账号
 
 在`github`网站注册一个账号
 
-### 新建username.github.io项目
+## 新建username.github.io项目
 1. 在 github 主页右下角找到 `New repository` 按钮
 
     ![New repository](http://oy41mkgad.bkt.clouddn.com/githubNewRepository.png "New repository")
@@ -35,7 +35,7 @@ comments: true
 
 4. 访问`https://用户名.github.io/`，就能看到刚刚index文件里面输入的内容啦。到此，工程已完成一半~
 
-### 安装Jekyll
+## 安装Jekyll
 
 1. 安装`ruby`，下载地址在[这里](https://rubyinstaller.org/downloads/)，然后正常的一直下一步下一步，直到提示完成。在cmd中输入
 
@@ -77,10 +77,10 @@ comments: true
 ```
 如果还报错，那就再安装，再运行，直到没有缺失文件为止，就会出现步骤3提到的默认页面啦，然后jekyll的配置已经完成啦，这个项目你可以保留，也可以删除，这就是为了配置jekyll才被创建的
 
-### 寻找Jekyll模板
+## 寻找Jekyll模板
 Jekyll有好多好多模板，找一个看着顺眼的很重要，不然写博客的时候没有好心情那就糟糕啦~推荐地址在[这里](http://jekyllthemes.org/)，你可以找一个然后download下来
 
-### 定制github.io
+## 定制github.io
 1. 将下载过来的Jekyll模板copy到从本地的github.io项目中
 
 2. 在_config.yml中将信息修改为你个人的信息
@@ -96,7 +96,7 @@ Jekyll有好多好多模板，找一个看着顺眼的很重要，不然写博�
 
 然后访问`https://用户名.github.io/`，就会发现网站已经不是只有一个index.html的寒酸样啦
 
-### 编写博客
+## 编写博客
 框架已经搭好，可以动手写博客啦。将文件放在_posts文件夹中，文件名必须为“年-月-日-文章标题.后缀名”，比如2017-10-20-create-github-page.md。如果网页代码采用html格式，后缀名为html；如果采用markdown格式，后缀名为md。
 
 
@@ -112,7 +112,7 @@ modified: 2017-10-20 // 修改日期
 comments: true
 ---
 ```
-博客中免不了需要插入图片，这时候就该图床上场啦，我用的是七牛图床，10G的免费空间，应该能用挺久的吧~
+博客中免不了需要插入图片，这时候就该图床上场啦，我用的是七牛图床，10G的免费空间，应该能用挺久的吧~使用方法的话[百度一下](http://www.baidu.com)你就知道:)
 
 
 
