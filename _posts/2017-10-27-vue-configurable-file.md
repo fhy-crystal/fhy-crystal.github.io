@@ -3,6 +3,7 @@ layout: post
 title: VUE WEBPACK 可配置文件
 excerpt: vue webpack 打包后，可以直接通过配置文件修改内容，无需重新打包
 categories: [教程, vue]
+tags: [教程, vue]
 comments: true
 ---
 

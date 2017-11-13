@@ -3,6 +3,7 @@ layout: post
 title: 创建自定义 Github 页面
 excerpt: 用 GitHub + Jekyll 创建自定义的 GitHub 页面
 categories: [教程]
+tags: [教程]
 modified: 2017-10-20
 comments: true
 ---

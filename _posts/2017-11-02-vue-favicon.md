@@ -3,6 +3,7 @@ layout: post
 title: VUE 设置 favicon
 excerpt: 设置faviocn
 categories: [教程, vue]
+tags: [教程, vue]
 modified: 2017-11-02
 comments: true
 ---

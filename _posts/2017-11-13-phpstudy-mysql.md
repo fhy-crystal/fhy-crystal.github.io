@@ -3,6 +3,7 @@ layout: post
 title: phpstudy 中 mysql 的使用
 excerpt: windows 下使用 phpstudy 中集成的 mysql 创建简单的数据库
 categories: [教程, phpstudy, mysql]
+tags: [教程, phpstudy, mysql]
 modified: 2017-11-13
 comments: true
 ---

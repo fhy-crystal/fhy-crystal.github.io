@@ -3,6 +3,7 @@ layout: post
 title: VUE 引入外部资源
 excerpt: 解决 vue build 之后，项目中引入的图片、文字等路径出错问题
 categories: [教程, vue]
+tags: [教程, vue]
 modified: 2017-11-01
 comments: true
 ---

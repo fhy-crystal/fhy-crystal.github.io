@@ -3,6 +3,7 @@ layout: post
 title: VUE history 模式
 excerpt: vue router 路由中 history 模式，去除项目路径中的#
 categories: [教程, vue]
+tags: [教程, vue]
 modified: 2017-10-25
 comments: true
 ---

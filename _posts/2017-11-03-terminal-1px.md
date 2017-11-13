@@ -2,7 +2,8 @@
 layout: post
 title: 移动端实现1px
 excerpt: 移动端实现1px像素线
-categories: [教程]
+categories: [教程, 移动端, css]
+tags: [教程, 移动端, css]
 modified: 2017-11-03
 comments: true
 ---
