@@ -44,3 +44,11 @@ export detault new Router({
     ![New](http://oy41mkgad.bkt.clouddn.com/new.png "New")
 
 3. 重启PHPstudy，404的问题就解决啦~撒花❀~
+
+## 优化
+相信很多小伙伴在www底下会放着很多项目，之前的配置直接修改了80端口的设置，会导致其他项目都无法被正常打开了，所以在此进行优化。
+同样打开`nginx-conf`文件，保留原先的80端口默认的设置，并在下面复制一份，然后再修改。如下图
+
+![nginxFix](http://oy41mkgad.bkt.clouddn.com/nginx_fixed.png "nginxFix")
+
+这样要访问该项目直接在浏览器输入`localhost:9080`即可，这样就不会影响其他项目，该怎么打开就怎么打开。
