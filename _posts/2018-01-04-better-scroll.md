@@ -88,10 +88,11 @@ vue 提供了一个获取DOM对象的接口 `vm.$refs` 。在这里，我们通�
 {% highlight html %}
 <template>
     <div class="wrapper" ref="wrapper">
-        <ul class="content" ref="content">
+        <ul class="content" :style="pullDownStyle" ref="content">
             <li v-for="item in data">{{item}}</li>
         </ul>
-        <div class="loading-wrapper"></div>
+        <div class="loading-wrapper top" v-show="pullingDown"></div>
+        <div class="loading-wrapper" v-show="isPullingUp"></div>
     </div>
 </template>
 <script>
@@ -101,7 +102,9 @@ vue 提供了一个获取DOM对象的接口 `vm.$refs` 。在这里，我们通�
             return {
                 data: [],
                 isPullingUp: false,
-                isPullingDown: false
+                isPullingDown: false,
+                beforePullDown: false,
+                pullDownStyle: ''
             }
         },
         created() {
@@ -121,11 +124,13 @@ vue 提供了一个获取DOM对象的接口 `vm.$refs` 。在这里，我们通�
                                 pullUpLoad: {
                                     threshold: -20, // 在上拉到超过底部 20px 时，触发 pullingUp 事件
                                 },
+                                click: true //better-scroll 默认会阻止浏览器的原生 click 事件。当设置为 true，better-scroll 会派发一个 click 事件
                             };
                             this.scroll = new Bscroll(this.$refs.wrapper, options);
                             // 下拉刷新
                             this.scroll.on('pullingDown',() =>{
                                 this.isPullingDown = true;
+                                this.beforePullDown = true;
                                 this.loadData();
                             })
                             // 上拉加载
@@ -133,11 +138,21 @@ vue 提供了一个获取DOM对象的接口 `vm.$refs` 。在这里，我们通�
                                 this.isPullingUp = true;
                                 this.loadData();
                             })
+                            // 下拉刷新时显示loading
+                            this.scroll.on('scroll', (pos) => {
+                                if (this.beforePullDown) {
+                                    this.pullDownStyle = `padding-top:3rem`;
+                                }
+                            })
                         } else {
                             if (this.isPullingUp) {
                                 this.isPullingUp = false;
                                 this.scroll.finishPullUp();
                             } else if (this.isPullingDown) {
+                                // 取消loading显示
+                                this.pullDownStyle = `padding-top:0`;
+                                this.beforePullDown = false;
+                                
                                 this.isPullingDown = false;
                                 this.scroll.finishPullDown();
                             }
