@@ -43,6 +43,8 @@ export detault new Router({
     ![Origin](http://oy41mkgad.bkt.clouddn.com/origin.png "Origin")
     ![New](http://oy41mkgad.bkt.clouddn.com/new.png "New")
 
+    原理：正常访问网站时，是服务器通过我们的访问去帮忙解析路径，然后找到路径的对应位置，再返回请求。比如我们访问http://test.com/confirm，服务器就要在根目录下找到confirm的文件夹里面的index。但是我们build后的文件只含有static和index.html，所以肯定是找不到的，结果就会显示空白页面。所以需要将路由的控制权交给前端，服务器将所有的链接统统指向index.html，让vue-router来处理。
+
 3. 重启PHPstudy，404的问题就解决啦~撒花❀~
 
 ## 优化
